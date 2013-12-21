@@ -18,4 +18,4 @@ production:
   database: resolutions_production
   pool: 5
   username: myapp
-  password:
+  password: herokudevpw
