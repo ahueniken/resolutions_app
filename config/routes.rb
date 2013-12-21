@@ -1,4 +1,9 @@
 ResolutionApp::Application.routes.draw do
+  get "pages/signup"
+
+  get "pages/about"
+  get "/signup", to: "users#new"
+  resources :users
   get "resolutions/new"
 
   get "resolutions/edit"
