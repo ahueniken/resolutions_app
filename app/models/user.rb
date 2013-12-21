@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :password, 
-  has_many resolutions
-  
+  attr_accessible :name, :email, 
+  has_many :resolutions, dependent: :destroy
+
 end
