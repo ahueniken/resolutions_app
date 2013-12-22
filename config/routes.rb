@@ -1,11 +1,12 @@
 ResolutionApp::Application.routes.draw do
-  get "pages/signup"
-
-  get "pages/about"
-  get "/signup", to: "users#new"
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  get "/about", to: "pages#bout"
+  get "/signup", to: "users#new"
   get "resolutions/new"
-
   get "resolutions/edit"
 
   # The priority is based upon order of creation:
