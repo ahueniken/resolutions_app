@@ -1,2 +1,16 @@
-<h1>Resolutions#new</h1>
-<p>Find me in app/views/resolutions/new.html.erb</p>
+<% provide(:title, 'New Resolution') %>
+<h1>Add a Resolution</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@resolution) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :frequency %>
+      <%= f.text_field :frequency %>
+
+      <%= f.submit "Add a resolution", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
