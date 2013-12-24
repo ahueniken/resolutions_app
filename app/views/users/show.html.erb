@@ -1,1 +1,17 @@
-<%= @user.name %>, <%= @user.email %>
+<h1> <%= @user.name %> </h1>
+<% if @user == current_user %>
+	<% if @user.resolutions.count > 0 %>
+	<div class="row">
+		<ol>
+			<% @user.resolutions.each do |resolution| %>
+			<li class="resolution"> <%= resolution.name %> + <%= resolution.frequency %> </li>
+			<% end %>
+		</ol>
+	</div>
+	<% else %>
+	<p> You have no resolutions set yet </p>
+	<% end %>
+	<div class="row">
+		<%= link_to "New Resolution", '/resolutions/new' %>
+	</div>
+<% end %>

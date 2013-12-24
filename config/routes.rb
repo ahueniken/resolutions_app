@@ -3,9 +3,12 @@ ResolutionApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :resolutions
   
+
+  root :to => "pages#about"
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
-  get "/about", to: "pages#bout"
+  get "/about", to: "pages#about"
+
   get "/signup", to: "users#new"
   get "resolutions/new"
   get "resolutions/edit"
