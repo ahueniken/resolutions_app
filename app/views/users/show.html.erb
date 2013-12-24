@@ -4,7 +4,7 @@
 	<div class="row">
 		<ol>
 			<% @user.resolutions.each do |resolution| %>
-			<li class="resolution"> <%= resolution.name %> + <%= resolution.frequency %> </li>
+			<li class="resolution"> <%= resolution.name %> - Frequency: <%= resolution.frequency %> </li>
 			<% end %>
 		</ol>
 	</div>
