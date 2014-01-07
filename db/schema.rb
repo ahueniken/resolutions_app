@@ -11,14 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131222021140) do
+ActiveRecord::Schema.define(:version => 20131228182803) do
+
+  create_table "resolution_records", :force => true do |t|
+    t.integer  "resolution_id"
+    t.date     "date"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "resolutions", :force => true do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "frequency"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "current_streak"
   end
 
   create_table "users", :force => true do |t|

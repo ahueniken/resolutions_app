@@ -1,0 +1,2 @@
+module ResolutionRecordsHelper
+end

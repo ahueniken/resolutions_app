@@ -19,13 +19,17 @@ class ResolutionsController < ApplicationController
   	end
   end
 
+  def show
+    @resolution = current_user.resolutions.find(params[:id])
+    @records = @resolution.resolution_records
+  end
+
+
   private
 
   	def resolution_params
 		  params.require(:resolution).permit(:name, :frequency)
 		end
   
-    def signed_in_user  
-      redirect_to signin_path, notice: "Please sign in." unless signed_in?   
-    end 
+
 end

@@ -1,0 +1,16 @@
+<h1> <%= @resolution.name %> </h1>
+<h2> <%= @resolution.frequency %> </h2>
+	<% if @records.count > 0 %>
+	<div class="row">
+		<ol>
+			<% @records.each do |record| %>
+			<li class="resolution"> <%= record.date %> </li>
+			<% end %>
+		</ol>
+	</div>
+	<% else %>
+	<p> You have no records for this resolution </p>
+	<% end %>
+	<div class="row">
+		<%= link_to "New Record", '/resolutions/new' %>
+	</div>

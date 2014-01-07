@@ -2,7 +2,7 @@ ResolutionApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :resolutions
-  
+  resources :resolution_records
 
   root :to => "pages#about"
   match '/signin',  to: 'sessions#new',         via: 'get'

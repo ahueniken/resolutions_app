@@ -1,10 +1,14 @@
 <h1> <%= @user.name %> </h1>
+<h1> Hi Granny </h1>
 <% if @user == current_user %>
 	<% if @user.resolutions.count > 0 %>
 	<div class="row">
 		<ol>
 			<% @user.resolutions.each do |resolution| %>
-			<li class="resolution"> <%= resolution.name %> - Frequency: <%= resolution.frequency %> </li>
+			<li class="resolution"> <%= resolution.name %> - Frequency: <%= resolution.frequency %> - Current Streak : <%= resolution.current_streak %> </li>
+			<% @record = resolution.resolution_records.build %>
+			<% @id = resolution.id %>
+			<section>  <%= render 'shared/resolution_record_form' %>       </section> 
 			<% end %>
 		</ol>
 	</div>
