@@ -79,3 +79,45 @@ a:hover {
 	text-align: center;
 	padding-top: 20px;
 }
+
+.user-name {
+	color: #FFFFFF;
+	font-size: 16px;
+	float: right;
+	text-align: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+.inline {
+	display: inline;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.add-top {
+	margin-top: 40px;
+}
+
+@font-face {
+	    font-family: 'Entypo';
+	    src: url('../fonts/entypo.eot'),
+	         url('../fonts/entypo.woff') format('woff'),
+	         url('../fonts/entypo.ttf') format('truetype'),
+	         url('../fonts/entypo.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+.entypo {
+	font-family: Entypo;
+}

@@ -1,3 +1,88 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.resolutions {
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+.resolution-name {
+	display: inline-block;
+	font-size: 30px;
+	margin-bottom: 70px;
+	margin-left: 60px;
+}
+
+.resolution-streak {
+	margin-top: 22px;
+	margin-left: 60px;
+	display: inline;
+	float: left;
+}
+
+.streak-num {
+	color: #FFFFFF;
+	position: absolute;
+	margin-top: 36px;
+	margin-left: 90px;
+	font-size: 40px;
+}
+
+.star-8 {
+    background: #00B945;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    -webkit-transform: rotate(20deg);
+       -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+         -o-transform: rotate(20deg);
+            transform: rotate(20deg);
+}
+.star-8:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background: #00B945;
+    -webkit-transform: rotate(135deg);
+       -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+         -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+}
+
+.user-header {
+	display: inline-block;
+}
+
+.new-res {
+	margin-top: 30px;
+	clear: both !important;
+	display: inline;
+	float: right;
+}
+
+.checkmark {
+	font-size: 60px;
+	display: inline;
+	margin-left: 80px;
+}
+
+form {
+	display: inline;
+}
+
+input {
+	background: none;
+	border: none;
+	color: #37B6CE;
+}
+
+input:hover {
+	color: #015666;
+}

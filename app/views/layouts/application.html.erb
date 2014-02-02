@@ -12,11 +12,12 @@
       <div class="container">
         <h4 class="page-title"> <span class="green">STREAKS</span><span class="blue">!</span> </h4>
         <% if signed_in? %>
-        <h5 class=""> <%= current_user.id %> </h5>
         <%= link_to "Sign out", signout_path, method: "delete" %>
+        <h5 class="user-name"> Hi, <%= current_user.name %> </h5>
         <% else %>
         <%= link_to "Sign in", signin_path %>
         <% end %>
+
       </div>
     </div>
     <div class="container">

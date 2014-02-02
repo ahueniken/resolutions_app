@@ -1,21 +1,24 @@
-<h1> <%= @user.name %> </h1>
-<h1> Hi Granny </h1>
+<div class="row clear add-top">
+<h1 class="user-header"> <%= @user.name %> </h1>
+<div class="new-res"> <%= link_to "New Resolution", '/resolutions/new' %> </div>
+</div>
 <% if @user == current_user %>
 	<% if @user.resolutions.count > 0 %>
 	<div class="row">
-		<ol>
+		<div class="resolutions">
 			<% @user.resolutions.each do |resolution| %>
-			<li class="resolution"> <%= resolution.name %> - Frequency: <%= resolution.frequency %> - Current Streak : <%= resolution.current_streak %> </li>
-			<% @record = resolution.resolution_records.build %>
-			<% @id = resolution.id %>
-			<section>  <%= render 'shared/resolution_record_form' %>       </section> 
+			<div class="row">
+				<div class="star-8 resolution-streak"> </div>
+				<h4 class="streak-num"> <%= resolution.current_streak %> </h4>
+				<h4 class="resolution-name"> <%= resolution.name %> </h4>
+				<% @record = resolution.resolution_records.build %>
+				<% @id = resolution.id %>
+				<section class="inline">  <%= render 'shared/resolution_record_form' %>       </section> 
+			</div>
 			<% end %>
-		</ol>
+		</div>
 	</div>
 	<% else %>
 	<p> You have no resolutions set yet </p>
 	<% end %>
-	<div class="row">
-		<%= link_to "New Resolution", '/resolutions/new' %>
-	</div>
 <% end %>

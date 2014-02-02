@@ -27,4 +27,9 @@ module SessionsHelper
   def signed_in_user  
     redirect_to signin_path, notice: "Please sign in." unless signed_in?   
   end 
+
+  def get_first_name(full_name)
+    full_name.Split()[0]
+  end
+
 end
