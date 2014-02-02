@@ -4,7 +4,7 @@ ResolutionApp::Application.routes.draw do
   resources :resolutions
   resources :resolution_records
 
-  root :to => "pages#about"
+  root :to => "pages#home"
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   get "/about", to: "pages#about"

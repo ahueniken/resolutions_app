@@ -19,6 +19,16 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Open Sans, sans-serif;
+	color: #444444;
+}
+
+a {
+	text-decoration: none;
+	color: #0485AD;
+}
+
+a:hover {
+	color: #015666;
 }
 
 .nav-bar {
@@ -50,4 +60,22 @@ body {
 	margin-right: auto;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.green {
+	color: #00B945;
+}
+
+.blue {
+	color: #37B6CE;
+}
+
+.orange {
+	color: #FF5C00;
+}
+
+.alert {
+	color: #FF1E00;
+	text-align: center;
+	padding-top: 20px;
 }
