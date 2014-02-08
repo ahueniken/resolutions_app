@@ -13,6 +13,7 @@
 				<h4 class="resolution-name"> <%= resolution.name %> </h4>
 				<% @record = resolution.resolution_records.build %>
 				<% @id = resolution.id %>
+				<%= date = DateTime.now %>
 				<section class="inline">  <%= render 'shared/resolution_record_form' %>       </section> 
 			</div>
 			<% end %>
