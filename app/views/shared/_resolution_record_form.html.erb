@@ -1,8 +1,9 @@
 <%= form_for(@record) do |f| %>  
 <%= render 'shared/error_messages', object: f.object %>   
 <div class="field hidden">
-	<%= f.text_field :date, value: @date %>  
+ 
 	<%= f.text_field :id, value: @id %> 
 </div>   
+<%= f.text_field :date, value: @date %> 
 <input class="inline checkmark entypo" name="commit" type="submit" value="&#10003;">
 <% end %>

@@ -121,3 +121,14 @@ a:hover {
 .entypo {
 	font-family: Entypo;
 }
+
+input[type=text]
+{
+    border:solid 1px #BFBDBD;
+    color: #979797;
+    height: 40px;
+    padding-left:10px;
+    width: 102px;
+    margin-left: 60px;
+    font-size: 18px;
+}
