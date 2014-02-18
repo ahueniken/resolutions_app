@@ -29,8 +29,15 @@ class ResolutionRecordsController < ApplicationController
 					current_streak += 1
 					date = date - 1
 				end
-				if date = Date.today
-					date = date - 1 
+			end
+			if date == Date.today
+				date = date - 1
+				current_streak = 0
+				@records.each do |record|
+					if record.date == date 
+						current_streak += 1
+						date = date - 1
+					end
 				end
 			end
 			return current_streak

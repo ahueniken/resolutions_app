@@ -9,7 +9,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'rails_12factor'
-
+gem 'bootstrap-datepicker-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
