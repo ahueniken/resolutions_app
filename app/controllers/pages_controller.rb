@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   end
 
   def home
+  	if signed_in? 
+  		redirect_to current_user
+  	end
+
   end
   
 end

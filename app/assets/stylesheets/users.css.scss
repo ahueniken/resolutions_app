@@ -68,21 +68,29 @@
 }
 
 .checkmark {
+	background: none;
+	border: none;
+	color: #37B6CE;
 	font-size: 60px;
 	display: inline;
 	margin-left: 80px;
+}
+
+.checkmark:hover {
+	color: #015666;
 }
 
 form {
 	display: inline;
 }
 
-input {
-	background: none;
-	border: none;
-	color: #37B6CE;
-}
-
-input:hover {
-	color: #015666;
+.new_resolution_record input[type=text]
+{
+    border:solid 1px #BFBDBD;
+    color: #979797;
+    height: 40px;
+    padding-left:10px;
+    width: 102px;
+    margin-left: 60px;
+    font-size: 18px;
 }
