@@ -1,3 +1,27 @@
 // Place all the styles related to the Resolutions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.new_resolution input[type="submit"]
+{
+	background: none;
+	border: none;
+	width: 200px;
+	outline: none;
+	font-size: 20px;
+	text-align: left;
+	color: #0485AD;
+}
+
+.new_resolution input[type="submit"]:hover
+{
+	color: #015666;
+}
+
+
+.new_resolution .btn
+{
+	margin-left: 0;
+	margin-top: 30px;
+}

@@ -7,9 +7,10 @@
       <%= f.label :name %>
       <%= f.text_field :name %>
 
+      <div class="field hidden">
       <%= f.label :frequency %>
-      <%= f.text_field :frequency %>
-
+      <%= f.text_field :frequency, value: "Daily"%>
+   	 </div>
       <%= f.submit "Add a resolution", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
