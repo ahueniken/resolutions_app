@@ -6,6 +6,7 @@ class ResolutionRecordsController < ApplicationController
 	end
 
 	def create  
+		logger.debug "HI!"
 		@resolution = current_user.resolutions.find_by_id(params[:resolution_record][:id])  
 	  @record = @resolution.resolution_records.build(params[:resolution_record])
 		if @record.save  
@@ -23,7 +24,7 @@ class ResolutionRecordsController < ApplicationController
 			@current_resolution = current_user.resolutions.find_by_id(resolution_id)
 			current_streak = 0
 			date = Date.today
-			@records = @current_resolution.resolution_records.sort_by { |date| }.reverse
+			@records = @current_resolution.resolution_records
 			@records.each do |record|
 				if record.date == date 
 					current_streak += 1
