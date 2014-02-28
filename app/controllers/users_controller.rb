@@ -19,6 +19,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "You've deleted your account."
+    sign_out
+    redirect_to root_url
+  end
+
 	private
 
 		def user_params

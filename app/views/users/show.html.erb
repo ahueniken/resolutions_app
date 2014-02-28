@@ -24,4 +24,5 @@
 	<% else %>
 	<p> You have no resolutions set yet </p>
 	<% end %>
+	<%= link_to "Delete Your Account", @user, method: :delete, data: { confirm: "Are you sure you want to delete your acount?" } %>
 <% end %>

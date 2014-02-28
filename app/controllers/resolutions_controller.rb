@@ -24,6 +24,11 @@ class ResolutionsController < ApplicationController
     @records = @resolution.resolution_records
   end
 
+  def destroy
+    Resolution.find(params[:id]).destroy
+    flash[:success] = "Resolution deleted."
+    redirect_to root_url
+  end
 
   private
 

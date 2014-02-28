@@ -7,7 +7,10 @@
 	<div class="row">
 		<ol>
 			<% @records.each do |record| %>
-			<li class="resolution"> <%= record.date %> </li>
+			<li class="resolution"> 
+			  <%= record.date %>
+				<%= link_to "x", record, method: :delete, data: { confirm: "Are you sure you want to delete this record?" }, class: "add-left" %>
+		  </li>
 			<% end %>
 		</ol>
 	</div>
@@ -23,3 +26,6 @@
 	<div class="add-record"> 
 		<%= render 'shared/resolution_record_form' %>
 	</div>
+	<div class="row add-top">
+	<%= link_to "Delete This Resolution", @resolution, method: :delete, data: { confirm: "Are you sure you want to delete this resolution?" } %>
+</div>

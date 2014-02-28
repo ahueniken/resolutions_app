@@ -112,6 +112,10 @@ a:hover {
 	margin-top: 40px;
 }
 
+.add-left {
+	margin-left: 18px;
+}
+
 @font-face {
 	    font-family: 'Entypo';
 	    src: url('../fonts/entypo.eot'),
