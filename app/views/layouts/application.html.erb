@@ -10,13 +10,17 @@
 <body>
     <div class="nav-bar">
       <div class="container">
-        <h4 class="page-title"> <span class="green">STREAKS</span><span class="blue">!</span> </h4>
+        <div class="inline title">
+        <h4 class="page-title"> <a href="/"><span class="green">STREAKS</span><span class="blue">!</span> </a> </h4>
+        </div>
+        <div class="inline nav">
         <% if signed_in? %>
         <%= link_to "Sign out", signout_path, method: "delete" %>
         <h5 class="user-name"> Hi, <%= current_user.name %> </h5>
         <% else %>
         <%= link_to "Sign in", signin_path %>
         <% end %>
+      </div>
 
       </div>
     </div>
