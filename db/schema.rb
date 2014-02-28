@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131228182803) do
+ActiveRecord::Schema.define(:version => 20140228015058) do
 
   create_table "resolution_records", :force => true do |t|
     t.integer  "resolution_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20131228182803) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "remember_token"
+    t.date     "last_seen"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
