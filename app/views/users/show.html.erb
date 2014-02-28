@@ -10,7 +10,9 @@
 			<div class="row">
 				<div class="star-8 resolution-streak"> </div>
 				<h4 class="streak-num"> <%= resolution.current_streak %> </h4>
-				<h4 class="resolution-name"> <%= resolution.name %> </h4>
+				<h4 class="resolution-name">
+					<%= link_to resolution.name, resolution %>
+				</h4>
 				<% @record = resolution.resolution_records.build %>
 				<% @id = resolution.id %>
 				<% @date = Date.today %>

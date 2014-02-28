@@ -1,5 +1,7 @@
 <%= form_for(@record) do |f| %>  
-<%= render 'shared/error_messages', object: f.object %>   
+<% if @user != nil %>
+<%= render 'shared/error_messages', object: f.object %>  
+<% end %> 
 <div class="field hidden">
  
 	<%= f.text_field :id, value: @id %> 

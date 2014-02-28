@@ -11,6 +11,10 @@
 	<% else %>
 	<p> You have no records for this resolution </p>
 	<% end %>
-	<div class="row">
-		<%= link_to "New Record", '/resolutions/new' %>
+	<h2 class="remove-bottom"> Add a Record </h2>
+	<% @record = @resolution.resolution_records.build %>
+	<% @id = @resolution.id %>
+	<% @date = Date.today %>
+	<div class="add-record"> 
+		<%= render 'shared/resolution_record_form' %>
 	</div>
