@@ -19,6 +19,14 @@ class ResolutionRecordsController < ApplicationController
  		end   
 	end	
 
+	def destroy
+		resolutionRecord = ResolutionRecord.find(params[:id])
+		resolutionId = Resolution.find(resolutionRecord.resolution_id)
+    ResolutionRecord.find(params[:id]).destroy
+    flash[:success] = "Record deleted."
+    redirect_to Resolution.find(resolutionId)
+  end
+
 	private
 		def get_current_streak(resolution_id)
 			@current_resolution = current_user.resolutions.find_by_id(resolution_id)
