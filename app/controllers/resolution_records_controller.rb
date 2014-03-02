@@ -14,7 +14,9 @@ class ResolutionRecordsController < ApplicationController
 		  streak = get_current_streak(@resolution.id)
 		  @resolution.update_attribute(:current_streak, streak)
 		  if (@resolution.max_streak.nil? or streak > @resolution.max_streak)
+		  	puts "Trying to update Max Streak"
 		  	@resolution.update_attribute(:max_streak, streak)
+		  	puts "Done Updating Max Streak #{@resolution.max_streak}"
 		  end
 		  redirect_to current_user 
 		else  
