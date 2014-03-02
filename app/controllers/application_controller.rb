@@ -46,6 +46,9 @@ class ApplicationController < ActionController::Base
 				end
 			end
 			resolution.update_attribute(:current_streak, current_streak)
+			if (resolution.max_streak.nil? or current_streak > resolution.max_streak)
+				resolution.update_attribute(:max_streak, current_streak)
+			end
 		end
 
 

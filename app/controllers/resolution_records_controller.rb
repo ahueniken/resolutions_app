@@ -13,6 +13,9 @@ class ResolutionRecordsController < ApplicationController
 		  flash[:success] = "Record Added!"
 		  streak = get_current_streak(@resolution.id)
 		  @resolution.update_attribute(:current_streak, streak)
+		  if (@resolution.max_streak.nil? or streak > @resolution.max_streak)
+		  	@resolution.update_attribute(:max_streak, streak)
+		  end
 		  redirect_to current_user 
 		else  
 		  redirect_to root_path 

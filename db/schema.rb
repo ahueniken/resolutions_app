@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228015058) do
+ActiveRecord::Schema.define(:version => 20140302144845) do
 
   create_table "resolution_records", :force => true do |t|
     t.integer  "resolution_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20140228015058) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.integer  "current_streak"
+    t.integer  "max_streak"
   end
 
   create_table "users", :force => true do |t|
