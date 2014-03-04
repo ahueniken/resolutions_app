@@ -1,10 +1,11 @@
-== Streaks! A simple web-app for daily habits
+= Streaks! A simple web-app for daily habits
 
-This was a simple Rails app I made for myself so I could gamify and keep doing daily habits which I never was able to ingrain. 
+This was a simple Rails app I made for myself so I could gamify and keep doing daily habits which I wouldn't remember/keep up with otherwise.
+Example: Don't drink pop at work
 
 You can see it in action at daily-streaks.herokuapp.com
 
 Feel free to use the site or fork the app if you need a tool yourself to continue doing daily habits.
 
-Incomplete Features:
-Frequency: New resolutions allow you to set a frequency. However streaks are still counted daily. 
+=== Incomplete Features:
+- New resolutions allow you to input a frequency. However streaks are still counted daily. In other words it has no effect.
